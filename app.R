@@ -48,10 +48,13 @@ home_tab <- nav_panel(
   title = "Home",
   value = "home",
   page_fluid(
-    h1("Ethics Application Reporting"),
+    h1("Ethics Applications Reviewed"),
     dataTableOutput("preview"),
     downloadButton("download", "Download formatted"),
-    downloadButton("download_reviews", "Download reviews")
+    downloadButton("download_reviews", "Download reviews"),
+    card(
+      "Note: The figures refer to the number of ethics applications reviewed. If a reviewer reviwed one application multiple times, it's counted as one."
+    )
   )
 )
 
